@@ -1,17 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #b8c6db;
-  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Palette Mosaic', cursive;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
 }
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slider {
+    /* 100% means fills the entire container */
+    height: 100%;
+    /* 35% means fills 35% of the container */
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    transition: transform 0.5s ease-in-out;
+}
+
+/* target the immediate div right after left slider */
+.left-slider > div {
+    /* each div inside of the left container should be of the entire height of its parent container */
+    height: 100%;
+    /* each div should be 100% of is parent container which in itself was 35% */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* target the h1 right after left slider */
+.left-slider > h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+/* right slider */
+.right-slider {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* background image div */
+.right-slider > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+/* button  */
+button {
+    background-color: aliceblue;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/* hover effect */
+/* the button becomes a bit dark when hovered over */
+button:hover {
+    color: black;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*  */
+.slider-container .scroll-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.slider-container .scroll-buttons .down-button {
+    /* sets the button side by side */
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .scroll-buttons .up-button {
+    /* sets the up arrow slight up than the left arrow */
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
