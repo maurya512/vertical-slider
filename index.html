@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<title>Vertical Slider</title>
-	</head>
-	<body>
-        <!-- wrap the image -->
-		<div class="slider-container">
-            <!-- left side of the container -->
-            <div class="left-slider"></div>
-            <!-- right side of the container -->
-            <div class="right-slider"></div>
-            <!-- scroll buttons at the center of the page -->
-            <div class="scroll-buttons">
-                <!-- down scroll button -->
-                <button class="down-button">
-                    <i class="fas fa-arrow-down"></i>
-                </button>
-                <!-- upward scroll button -->
-                <button class="up-button">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vertical Slider</title>
+</head>
+
+<body>
+    <!-- wrap the image -->
+    <div class="slider-container">
+        <!-- left side of the container -->
+        <div class="left-slider">
+            <!-- since the slides are inversely acting i.e: 1 slide going up and another going down the 1st left slider div is going to be referenced with the last div for right slider -->
+            <!-- name and background color for 1st slider -->
+            <div style="background-color:rgb(82, 235, 235)">
+                <h1>
+                    Astronaut
+                </h1>
+                <p>once in a lifetime phenomenon</p>
+            </div>
+            <!-- name and background color for 2nd slider -->
+            <div style="background-color: rgb(207, 0, 114)">
+                <h1>
+                    Street Art
+                </h1>
+                <p>
+                    earth without 'art' is just 'eh'
+                </p>
+            </div>
+            <!-- name and background color for 3rd element -->
+            <div style="background-color: rgb(155, 240, 233)">
+                <h1>
+                    Music
+                </h1>
+                <p>
+                    a right note is all one needs
+                </p>
+            </div>
+            <div style="background-color: rgb(184, 46, 11);">
+                <h1>
+                    Funny Quotes
+                </h1>
+                <p>
+                    because laughing never cost a dime
+                </p>
+            </div>
+            <!-- name and background for 4th element -->
+            <div style="background-color: rgb(20, 116, 68);">
+                <h1>
+                    Cool Pineapple
+                </h1>
+                <p>
+                    exterior != interior
+                </p>
             </div>
         </div>
-		<script src="script.js"></script>
-	</body>
+        <!-- right side of the container -->
+        <div class="right-slider">
+            <!-- a div for background image and importing a link from pexels website -->
+            <!-- yellow pineapple -->
+            <div style="background-image: url('https://images.pexels.com/photos/1161547/pexels-photo-1161547.jpeg?cs=srgb&dl=pexels-lisa-1161547.jpg&fm=jpg')"></div>
+            <!-- funny quotes -->
+            <div style="background-image: url('https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?cs=srgb&dl=pexels-mikechie-esparagoza-1742370.jpg&fm=jpg')"></div>
+            <!-- headphones -->
+            <div style="background-image: url('https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?cs=srgb&dl=pexels-moose-photos-1037992.jpg&fm=jpg');"></div>
+            <!-- street art -->
+            <div style="background-image: url('https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?cs=srgb&dl=pexels-toa-heftiba-%C5%9Finca-1194420.jpg&fm=jpg');"></div>
+            <!-- astronaut -->
+            <div style="background-image: url('https://images.pexels.com/photos/163811/street-art-shipping-container-freight-highway-163811.jpeg?cs=srgb&dl=pexels-pixabay-163811.jpg&fm=jpg')"></div>
+        </div>
+        <!-- scroll buttons at the center of the page -->
+        <div class="scroll-buttons">
+            <!-- down scroll button -->
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <!-- upward scroll button -->
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
